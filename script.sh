@@ -24,7 +24,7 @@ mv wildtype.fna ../Owoloye_Babatunde/
 rm wildtype.gbk.1
 
 #  Confirm if the .fna file is mutant or wild type (tatatata vs tata)
-if grep -q "tatatata" ../Owoloye_Babatunde/wildtype.fna; then
+if grep -q "tatatata" wildtype.fna; then
     echo "The file is mutant"
 else
     echo "The file is wild type"
