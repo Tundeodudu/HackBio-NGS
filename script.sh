@@ -39,28 +39,29 @@ awk '/^ORIGIN/ {flag=1; next} /^\/\// {flag=0} flag' wildtype.gbk | wc -l
 
 
 # Print the sequence length of the .gbk file. (Use the LOCUS tag in the first line)
+grep "LOCUS" wildtype.gbk | awk '{print $3}'
 
 
 
 # Print the source organism of the .gbk file. (Use the SOURCE tag in the first line)
-
+grep "SOURCE" wildtype.gbk | awk '{$1=""; print $0}'
 
 
 #  List all the gene names of the .gbk file. Hint {grep '/gene='}
-
+grep "/gene=" wildtype.gbk
 
 
 # Clear your terminal space and print all commands used today
-
+clear
+history
 
 
 # List the files in the two folders
+ls ../Owoloye_Babatunde
 
 
 
-
-
-# TASK 2  Installing Bioinformatics Software on the Terminal
+## TASK 2  Installing Bioinformatics Software on the Terminal
 
 #  Activate your base conda environment
 conda create -n base python=3.10
