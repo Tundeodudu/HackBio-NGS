@@ -1,105 +1,116 @@
 #!/bin/bash
 # TASK 1 Biocomputing
 
-# question 1
+# Print your name
 echo "Owoloye Babatunde"
 
-# question 2
+# Create a folder titled your name
 mkdir Owoloye_Babatunde
 
-# question 3
+# Create another new directory titled biocomputing and change to that directory with one line of command
 mkdir biocomputing && cd biocomputing
 
-# question 4 
+# Download these 3 files:
 wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.fna
 
 wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
 
 wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
 
-# question 5
+# Move the .fna file to the folder titled your name
 mv wildtype.fna ../Owoloye_Babatunde/
 
-# question 6
+# Delete the duplicate gbk file
 rm wildtype.gbk.1
 
-# question 7
-grep -i "tatatata" wildtype.fna
+#  Confirm if the .fna file is mutant or wild type (tatatata vs tata)
+if grep -q "tatatata" ../Owoloye_Babatunde/wildtype.fna; then
+    echo "The file is mutant"
+else
+    echo "The file is wild type"
+fi
 
 
-# question 8
+# If mutant, print all matching lines into a new file
 grep -i "tatatata" wildtype.fna > mutant.fna
 
-# question 9
+# Count number of lines (excluding header) in the .gbk file
 awk '/^ORIGIN/ {flag=1; next} /^\/\// {flag=0} flag' wildtype.gbk | wc -l
 
-# question 10
+
+# Print the sequence length of the .gbk file. (Use the LOCUS tag in the first line)
 
 
-# question 11
+
+# Print the source organism of the .gbk file. (Use the SOURCE tag in the first line)
 
 
-# question 12
+
+#  List all the gene names of the .gbk file. Hint {grep '/gene='}
 
 
-# question 12
+
+# Clear your terminal space and print all commands used today
 
 
-# question 13
+
+# List the files in the two folders
 
 
-# question 14
+
 
 
 # TASK 2  Installing Bioinformatics Software on the Terminal
-# question 1
+
+#  Activate your base conda environment
 conda create -n base python=3.10
 conda activate base
 
 
-# question 2
+#  Create a conda environment named funtools
 conda create -n funtools
 
 
-# question 3
+# Activate the funtools environment
 conda activate funtools
 
 
-# question 4
+#  Install Figlet using conda or apt-get
 conda install -c conda-forge figlet
 
-# question 5
+
+# Run figlet <your name>
 figlet Tundeodudu
 
 
-# question 6
+# Install bwa through the bioconda channel
 conda install bwa
 
 
-# question 7
+# Install blast through the bioconda channel
 conda install blast
 
 
-# question 8
+#  Install samtools through the bioconda channel
 conda install samtools
 
 
-# question 9
+# Install bedtools through the bioconda channel
 conda install bedtools
 
 
-# question 10
+# Install spades.py through the bioconda channel
 conda install spades.py
 
 
-# question 11
+# Install bcftools through the bioconda channel
 conda install bctools
 
 
-# question 12
+#  Install fastp through the bioconda channel
 conda install fastp
 
 
-# question 13
+# Install multiqc through the bioconda channel
 conda install multiqc
 
