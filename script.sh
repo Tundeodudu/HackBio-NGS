@@ -1,5 +1,5 @@
 #!/bin/bash
-# TASK 1 Biocomputing
+# TASK 1 BASh Basic
 
 # Print your name
 echo "Owoloye Babatunde"
