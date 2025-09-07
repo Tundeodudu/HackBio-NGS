@@ -115,3 +115,11 @@ conda install fastp
 # Install multiqc through the bioconda channel
 conda install multiqc
 
+
+
+
+#Linkedin video
+#https://www.linkedin.com/posts/owoloye-babatunde-298606158_stepping-deeper-into-bioinformatics-first-activity-7370391870067109888-jOkg?utm_source=share&utm_medium=member_desktop&rcm=ACoAACXSMhQBV1LmZbQ-3t9cZj5CPO9DkU6JagM
+
+#SlackID
+#Tundeodudu
