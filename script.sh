@@ -105,7 +105,7 @@ conda install spades.py
 
 
 # Install bcftools through the bioconda channel
-conda install bctools
+conda install bcftools
 
 
 #  Install fastp through the bioconda channel
